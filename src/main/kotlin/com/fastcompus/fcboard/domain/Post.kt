@@ -6,11 +6,11 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
 @Entity
-class Post (
+class Post(
     createdBy: String,
     title: String,
     content: String,
-): BaseEntity(createdBy) {
+) : BaseEntity(createdBy) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0

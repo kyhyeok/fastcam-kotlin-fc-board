@@ -43,7 +43,7 @@ class PostController {
     @GetMapping("/posts")
     fun getPosts(
         pageable: Pageable,
-        postSearchRequest: PostSearchRequest
+        postSearchRequest: PostSearchRequest,
     ): Page<PostSummaryResponse> {
         println("title: ${postSearchRequest.title}")
         println("title: ${postSearchRequest.createdBy}")

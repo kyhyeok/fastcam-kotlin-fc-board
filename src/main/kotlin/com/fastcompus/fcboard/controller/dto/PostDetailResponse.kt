@@ -1,7 +1,5 @@
 package com.fastcompus.fcboard.controller.dto
 
-import java.time.LocalDateTime
-
 data class PostDetailResponse(
     val id: Long,
     val title: String,
