@@ -1,19 +1,22 @@
 package com.fastcompus.fcboard.controller
 
 import com.fastcompus.fcboard.controller.dto.*
+import com.fastcompus.fcboard.service.PostService
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.web.bind.annotation.*
 import java.time.LocalDateTime
 
 @RestController
-class PostController {
+class PostController(
+    private val postService: PostService,
+) {
 
     @PostMapping("/posts")
     fun createPost(
         @RequestBody postCreateRequest: PostCreateRequest,
     ): Long {
-        return 1L
+        return postService.createPost(postCreateRequest.toDto())
     }
 
     @PutMapping("/posts/{id}")
@@ -21,7 +24,7 @@ class PostController {
         @PathVariable("id") id: Long,
         @RequestBody postUpdateRequest: PostUpdateRequest,
     ): Long {
-        return id
+        return postService.updatePost(id, postUpdateRequest.toDto())
     }
 
     @DeleteMapping("/posts/{id}")
@@ -29,8 +32,7 @@ class PostController {
         @PathVariable("id") id: Long,
         @RequestParam createdBy: String,
     ): Long {
-        println(createdBy)
-        return id
+        return postService.deletePost(id, createdBy)
     }
 
     @GetMapping("/posts/{id}")
