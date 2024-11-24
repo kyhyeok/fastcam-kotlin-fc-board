@@ -1,9 +1,11 @@
 package com.fastcompus.fcboard.service
 
+import com.fastcompus.fcboard.domain.Comment
 import com.fastcompus.fcboard.domain.Post
 import com.fastcompus.fcboard.exception.PostNotDeletableException
 import com.fastcompus.fcboard.exception.PostNotFoundException
 import com.fastcompus.fcboard.exception.PostNotUpdatableException
+import com.fastcompus.fcboard.repository.CommentRepository
 import com.fastcompus.fcboard.repository.PostRepository
 import com.fastcompus.fcboard.service.dto.PostCreateRequestDto
 import com.fastcompus.fcboard.service.dto.PostSearchRequestDto
@@ -22,6 +24,7 @@ import org.springframework.data.repository.findByIdOrNull
 class PostServiceTest(
     private val postService: PostService,
     private val postRepository: PostRepository,
+    private val commentRepository: CommentRepository,
 ) : BehaviorSpec({
     beforeSpec {
         postRepository.saveAll(
@@ -123,6 +126,21 @@ class PostServiceTest(
         When("게시글이 없을 때") {
             then("게시글을 찾을 수 없다라는 예외가 발생한다.") {
                 shouldThrow<PostNotFoundException> { postService.getPost(9999L) }
+            }
+        }
+        When("댓글 추가시") {
+            commentRepository.save(Comment(content = "댓글 내용1", post = saved, createdBy = "댓글 작성자"))
+            commentRepository.save(Comment(content = "댓글 내용2", post = saved, createdBy = "댓글 작성자"))
+            commentRepository.save(Comment(content = "댓글 내용3", post = saved, createdBy = "댓글 작성자"))
+            val posts = postService.getPost(saved.id)
+            then("댓글이 함께 조회됨을 확인한다.") {
+                posts.comments.size shouldBe 3
+                posts.comments[0].content shouldBe "댓글 내용1"
+                posts.comments[1].content shouldBe "댓글 내용2"
+                posts.comments[2].content shouldBe "댓글 내용3"
+                posts.comments[0].createdBy shouldBe "댓글 작성자"
+                posts.comments[1].createdBy shouldBe "댓글 작성자"
+                posts.comments[2].createdBy shouldBe "댓글 작성자"
             }
         }
     }
