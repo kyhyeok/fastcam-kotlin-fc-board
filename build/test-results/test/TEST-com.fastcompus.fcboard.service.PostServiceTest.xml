@@ -1,26 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.fastcompus.fcboard.service.PostServiceTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2024-12-02T01:26:59" hostname="gim-yunhyeog-ui-MacBookPro.local" time="1.631">
+<testsuite name="com.fastcompus.fcboard.service.PostServiceTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2024-12-02T02:32:35" hostname="gim-yunhyeog-ui-MacBookPro.local" time="1.951">
   <properties/>
-  <testcase name="Then: 게시글이 정상적으로 생성됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.061"/>
-  <testcase name="Then: 태그가 정상적으로 추가됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.0"/>
-  <testcase name="Then: 게시글이 정상적으로 수정됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.049"/>
-  <testcase name="Then: 게시글을 찾을 수 없다라는 예외가 발생한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.031"/>
-  <testcase name="Then: 수정할 수 없는 게시물 입니다. 예외가 발생한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.05"/>
-  <testcase name="Then: 게시글이 정상적으로 삭제됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.047"/>
-  <testcase name="Then: 삭제할 수 없는 게시물입니다. 예외가 발생한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.029"/>
-  <testcase name="Then: 게시글의 내용이 정상적으로 반환됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.001"/>
-  <testcase name="Then: 게시글을 찾을 수 없다라는 예외가 발생한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.044"/>
+  <testcase name="Then: 게시글이 정상적으로 생성됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.088"/>
+  <testcase name="Then: 태그가 정상적으로 추가됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.072"/>
+  <testcase name="Then: 게시글이 정상적으로 수정됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.058"/>
+  <testcase name="Then: 게시글을 찾을 수 없다라는 예외가 발생한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.037"/>
+  <testcase name="Then: 수정할 수 없는 게시물 입니다. 예외가 발생한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.037"/>
+  <testcase name="Then: 정상적으로 수정됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.017"/>
+  <testcase name="Then: 태그 순서가 변경되었을때 정상적으로 변경됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.136"/>
+  <testcase name="Then: 게시글이 정상적으로 삭제됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.056"/>
+  <testcase name="Then: 삭제할 수 없는 게시물입니다. 예외가 발생한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.053"/>
+  <testcase name="Then: 게시글의 내용이 정상적으로 반환됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.0"/>
+  <testcase name="Then: 태그가 정상적으로 조회됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.0"/>
+  <testcase name="Then: 게시글을 찾을 수 없다라는 예외가 발생한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.056"/>
   <testcase name="Then: 댓글이 함께 조회됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.001"/>
   <testcase name="Then: 게시글 페이지가 반환된다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.002"/>
   <testcase name="Then: 타이틀에 해당하는 게시글을 반환된다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.0"/>
   <testcase name="Then: 작성자에 해당하는 게시글이 반환된다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.0"/>
-  <system-out><![CDATA[2024-12-02T10:26:59.002+09:00  INFO 52387 --- [er @coroutine#3] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.fastcompus.fcboard.service.PostServiceTest]: PostServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-12-02T10:26:59.004+09:00  INFO 52387 --- [er @coroutine#3] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.fastcompus.fcboard.FcBoardApplication for test class com.fastcompus.fcboard.service.PostServiceTest
+  <testcase name="Then: 첫번째 태그가 함께 조회됨을 확인한다." classname="com.fastcompus.fcboard.service.PostServiceTest" time="0.0"/>
+  <system-out><![CDATA[11:32:32.621 [Test worker @coroutine#2] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.fastcompus.fcboard.service.PostServiceTest]: PostServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:32:32.691 [Test worker @coroutine#2] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.fastcompus.fcboard.FcBoardApplication for test class com.fastcompus.fcboard.service.PostServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.3)
+
+2024-12-02T11:32:32.980+09:00  INFO 56233 --- [er @coroutine#2] c.f.fcboard.service.PostServiceTest      : Starting PostServiceTest using Java 17.0.13 with PID 56233 (started by kimyoonhyeok in /Users/kimyoonhyeok/java/fastcam-kotlin-fc-board)
+2024-12-02T11:32:32.981+09:00  INFO 56233 --- [er @coroutine#2] c.f.fcboard.service.PostServiceTest      : The following 1 profile is active: "dev"
+2024-12-02T11:32:33.363+09:00  INFO 56233 --- [er @coroutine#2] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-02T11:32:33.397+09:00  INFO 56233 --- [er @coroutine#2] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 3 JPA repository interfaces.
+2024-12-02T11:32:33.581+09:00  INFO 56233 --- [er @coroutine#2] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-02T11:32:33.605+09:00  INFO 56233 --- [er @coroutine#2] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2024-12-02T11:32:33.606+09:00  INFO 56233 --- [er @coroutine#2] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-12-02T11:32:33.668+09:00  INFO 56233 --- [er @coroutine#2] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-12-02T11:32:33.727+09:00  INFO 56233 --- [er @coroutine#2] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-02T11:32:33.735+09:00  INFO 56233 --- [er @coroutine#2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-02T11:32:33.737+09:00  WARN 56233 --- [er @coroutine#2] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2024-12-02T11:32:33.944+09:00  INFO 56233 --- [er @coroutine#2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ff53704
+2024-12-02T11:32:33.945+09:00  INFO 56233 --- [er @coroutine#2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-02T11:32:34.080+09:00  INFO 56233 --- [er @coroutine#2] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-12-02T11:32:34.333+09:00  INFO 56233 --- [er @coroutine#2] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Hibernate: 
+    alter table comment 
+       modify column created_at  datetime(6)
+Hibernate: 
+    alter table comment 
+       modify column updated_at  datetime(6)
+Hibernate: 
+    alter table post 
+       modify column created_at  datetime(6)
+Hibernate: 
+    alter table post 
+       modify column updated_at  datetime(6)
+Hibernate: 
+    alter table tag 
+       modify column created_at  datetime(6)
+Hibernate: 
+    alter table tag 
+       modify column updated_at  datetime(6)
+2024-12-02T11:32:34.641+09:00  INFO 56233 --- [er @coroutine#2] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-02T11:32:34.919+09:00  WARN 56233 --- [er @coroutine#2] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-02T11:32:35.226+09:00  INFO 56233 --- [er @coroutine#2] c.f.fcboard.service.PostServiceTest      : Started PostServiceTest in 2.455 seconds (process running for 6.316)
 Hibernate: 
     insert 
     into
         post
         (content,created_at,created_by,title,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
@@ -33,8 +96,15 @@ Hibernate:
 Hibernate: 
     insert 
     into
-        post
-        (content,created_at,created_by,title,updated_at,updated_by) 
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
@@ -47,8 +117,15 @@ Hibernate:
 Hibernate: 
     insert 
     into
-        post
-        (content,created_at,created_by,title,updated_at,updated_by) 
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
@@ -61,8 +138,15 @@ Hibernate:
 Hibernate: 
     insert 
     into
-        post
-        (content,created_at,created_by,title,updated_at,updated_by) 
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
@@ -75,8 +159,15 @@ Hibernate:
 Hibernate: 
     insert 
     into
-        post
-        (content,created_at,created_by,title,updated_at,updated_by) 
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
@@ -84,6 +175,104 @@ Hibernate:
     into
         post
         (content,created_at,created_by,title,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        post
+        (content,created_at,created_by,title,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        post
+        (content,created_at,created_by,title,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        post
+        (content,created_at,created_by,title,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        post
+        (content,created_at,created_by,title,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
@@ -116,8 +305,62 @@ Hibernate:
 Hibernate: 
     insert 
     into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.post_id,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.content,
+        p1_0.created_at,
+        p1_0.created_by,
+        p1_0.title,
+        p1_0.updated_at,
+        p1_0.updated_by 
+    from
+        post p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    insert 
+    into
         post
         (content,created_at,created_by,title,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
@@ -133,6 +376,19 @@ Hibernate:
         post p1_0 
     where
         p1_0.id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
 Hibernate: 
     update
         post 
@@ -143,6 +399,18 @@ Hibernate:
         title=?,
         updated_at=?,
         updated_by=? 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        tag 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        tag 
     where
         id=?
 Hibernate: 
@@ -171,6 +439,194 @@ Hibernate:
         post p1_0 
     where
         p1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.content,
+        p1_0.created_at,
+        p1_0.created_by,
+        p1_0.title,
+        p1_0.updated_at,
+        p1_0.updated_by 
+    from
+        post p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.content,
+        p1_0.created_at,
+        p1_0.created_by,
+        p1_0.title,
+        p1_0.updated_at,
+        p1_0.updated_by 
+    from
+        post p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    update
+        post 
+    set
+        content=?,
+        created_at=?,
+        created_by=?,
+        title=?,
+        updated_at=?,
+        updated_by=? 
+    where
+        id=?
+Hibernate: 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.post_id,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.content,
+        p1_0.created_at,
+        p1_0.created_by,
+        p1_0.title,
+        p1_0.updated_at,
+        p1_0.updated_by 
+    from
+        post p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.content,
+        p1_0.created_at,
+        p1_0.created_by,
+        p1_0.title,
+        p1_0.updated_at,
+        p1_0.updated_by 
+    from
+        post p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    update
+        post 
+    set
+        content=?,
+        created_at=?,
+        created_by=?,
+        title=?,
+        updated_at=?,
+        updated_by=? 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        tag 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        tag 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        tag 
+    where
+        id=?
+Hibernate: 
+    select
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.post_id,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
 Hibernate: 
     select
         p1_0.id,
@@ -277,63 +733,24 @@ Hibernate:
     values
         (?,?,?,?,?,?)
 Hibernate: 
-    select
-        p1_0.id,
-        p1_0.content,
-        p1_0.created_at,
-        p1_0.created_by,
-        p1_0.title,
-        p1_0.updated_at,
-        p1_0.updated_by 
-    from
-        post p1_0 
-    where
-        p1_0.id=?
-Hibernate: 
-    select
-        c1_0.post_id,
-        c1_0.id,
-        c1_0.content,
-        c1_0.created_at,
-        c1_0.created_by,
-        c1_0.updated_at,
-        c1_0.updated_by 
-    from
-        comment c1_0 
-    where
-        c1_0.post_id=?
-Hibernate: 
-    select
-        p1_0.id,
-        p1_0.content,
-        p1_0.created_at,
-        p1_0.created_by,
-        p1_0.title,
-        p1_0.updated_at,
-        p1_0.updated_by 
-    from
-        post p1_0 
-    where
-        p1_0.id=?
-Hibernate: 
     insert 
     into
-        comment
-        (content,created_at,created_by,post_id,updated_at,updated_by) 
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
     insert 
     into
-        comment
-        (content,created_at,created_by,post_id,updated_at,updated_by) 
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
     insert 
     into
-        comment
-        (content,created_at,created_by,post_id,updated_at,updated_by) 
+        tag
+        (created_at,created_by,name,post_id,updated_at,updated_by) 
     values
         (?,?,?,?,?,?)
 Hibernate: 
@@ -362,6 +779,92 @@ Hibernate:
         comment c1_0 
     where
         c1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.content,
+        p1_0.created_at,
+        p1_0.created_by,
+        p1_0.title,
+        p1_0.updated_at,
+        p1_0.updated_by 
+    from
+        post p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    insert 
+    into
+        comment
+        (content,created_at,created_by,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        comment
+        (content,created_at,created_by,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        comment
+        (content,created_at,created_by,post_id,updated_at,updated_by) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.content,
+        p1_0.created_at,
+        p1_0.created_by,
+        p1_0.title,
+        p1_0.updated_at,
+        p1_0.updated_by 
+    from
+        post p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.post_id,
+        c1_0.id,
+        c1_0.content,
+        c1_0.created_at,
+        c1_0.created_by,
+        c1_0.updated_at,
+        c1_0.updated_by 
+    from
+        comment c1_0 
+    where
+        c1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
 Hibernate: 
     select
         count(p1_0.id) 
@@ -381,6 +884,71 @@ Hibernate:
     order by
         p1_0.created_at desc limit ?,
         ?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
 Hibernate: 
     select
         count(p1_0.id) 
@@ -406,6 +974,71 @@ Hibernate:
         ?
 Hibernate: 
     select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
         count(p1_0.id) 
     from
         post p1_0 
@@ -427,6 +1060,72 @@ Hibernate:
     order by
         p1_0.created_at desc limit ?,
         ?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
+Hibernate: 
+    select
+        t1_0.post_id,
+        t1_0.id,
+        t1_0.created_at,
+        t1_0.created_by,
+        t1_0.name,
+        t1_0.updated_at,
+        t1_0.updated_by 
+    from
+        tag t1_0 
+    where
+        t1_0.post_id=?
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+]]></system-err>
 </testsuite>
