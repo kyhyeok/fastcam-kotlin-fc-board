@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface LikeRepository: JpaRepository<Like, Long> {
+    fun countByPostId(postId: Long): Long
 }

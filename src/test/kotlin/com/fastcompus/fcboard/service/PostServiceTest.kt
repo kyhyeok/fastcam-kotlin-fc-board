@@ -1,6 +1,7 @@
 package com.fastcompus.fcboard.service
 
 import com.fastcompus.fcboard.domain.Comment
+import com.fastcompus.fcboard.domain.Like
 import com.fastcompus.fcboard.domain.Post
 import com.fastcompus.fcboard.domain.Tag
 import com.fastcompus.fcboard.exception.PostNotDeletableException
@@ -25,6 +26,7 @@ import org.springframework.data.repository.findByIdOrNull
 @SpringBootTest
 class PostServiceTest(
     private val postService: PostService,
+    private val likeService: LikeService,
     private val postRepository: PostRepository,
     private val commentRepository: CommentRepository,
     private val tagRepository: TagRepository,
@@ -186,6 +188,9 @@ class PostServiceTest(
                 shouldThrow<PostNotFoundException> { postService.getPost(9999L) }
             }
         }
+        likeService.createLike(saved.id, "hyeok")
+        likeService.createLike(saved.id, "hyeok1")
+        likeService.createLike(saved.id, "hyeok2")
         When("댓글 추가시") {
             commentRepository.save(Comment(content = "댓글 내용1", post = saved, createdBy = "댓글 작성자"))
             commentRepository.save(Comment(content = "댓글 내용2", post = saved, createdBy = "댓글 작성자"))
@@ -199,6 +204,9 @@ class PostServiceTest(
                 posts.comments[0].createdBy shouldBe "댓글 작성자"
                 posts.comments[1].createdBy shouldBe "댓글 작성자"
                 posts.comments[2].createdBy shouldBe "댓글 작성자"
+            }
+            then("좋아요 개수가 조회됨을 확인한다.") {
+                posts.likeCount shouldBe 3
             }
         }
     }
@@ -249,6 +257,19 @@ class PostServiceTest(
                 postPage.content[2].title shouldBe "title8"
                 postPage.content[3].title shouldBe "title7"
                 postPage.content[4].title shouldBe "title6"
+            }
+        }
+        When("좋아요가 2개 추가되었을 때") {
+            val postPage = postService.findPageBy(PageRequest.of(0, 5), PostSearchRequestDto(tag = "tag5"))
+            postPage.content.forEach {
+                likeService.createLike(it.id, "hyeok1")
+                likeService.createLike(it.id, "hyeok2")
+            }
+            val likedPostPage = postService.findPageBy(PageRequest.of(0, 5), PostSearchRequestDto(tag = "tag5"))
+            then("좋아요 개수가 정상적으로 조회됨을 확인한다.") {
+                likedPostPage.content.forEach {
+                    it.likeCount shouldBe 2
+                }
             }
         }
     }
