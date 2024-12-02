@@ -1,19 +1,20 @@
 package com.fastcompus.fcboard.controller
 
+import com.fastcompus.fcboard.service.LikeService
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class LikeController {
+class LikeController(
+    private val likeService: LikeService,
+) {
     @PostMapping("posts/{postId}/likes")
     fun createLike(
         @PathVariable postId: Long,
         @RequestParam createdBy: String,
     ): Long {
-        println("postId: $postId")
-        println("createdBy: $createdBy")
-        return 1L
+        return likeService.createLike(postId, createdBy)
     }
 }
