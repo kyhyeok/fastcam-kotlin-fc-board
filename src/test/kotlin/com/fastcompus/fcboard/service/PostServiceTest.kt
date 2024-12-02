@@ -7,6 +7,7 @@ import com.fastcompus.fcboard.exception.PostNotFoundException
 import com.fastcompus.fcboard.exception.PostNotUpdatableException
 import com.fastcompus.fcboard.repository.CommentRepository
 import com.fastcompus.fcboard.repository.PostRepository
+import com.fastcompus.fcboard.repository.TagRepository
 import com.fastcompus.fcboard.service.dto.PostCreateRequestDto
 import com.fastcompus.fcboard.service.dto.PostSearchRequestDto
 import com.fastcompus.fcboard.service.dto.PostUpdateRequestDto
@@ -58,8 +59,22 @@ class PostServiceTest(
                 post?.createdBy shouldBe  "hyeok"
             }
         }
+        When("태그가 추가되면") {
+            val postId = postService.createPost(PostCreateRequestDto(
+                title = "제목",
+                content = "내용",
+                createdBy = "hyeok",
+                tags = listOf("tag1", "tag2")
+            ))
+            then("태그가 정상적으로 추가됨을 확인한다.") {
+//                val tags = tagRepository.findByPostId(postId)
+//                tags.size shouldBe 2
+//                tags[0].name shouldBe "tag1"
+//                tags[1].name shouldBe "tag2"
+            }
+        }
     }
-    given("게시글 수정 시") {
+    given("게시글 수정시") {
         val saved = postRepository.save(Post(title = "title", content = "content", createdBy = "hyeok"))
         When("정상 수정시") {
             val updatedId = postService.updatePost(saved.id, PostUpdateRequestDto(
