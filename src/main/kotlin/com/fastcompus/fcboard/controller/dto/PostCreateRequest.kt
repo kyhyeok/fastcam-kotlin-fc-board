@@ -13,6 +13,7 @@ data class PostCreateRequest(
 fun PostCreateRequest.toDto() = PostCreateRequestDto(
     title = this.title,
     content = this.content,
-    createdBy = this.createdBy
+    createdBy = this.createdBy,
+    tags = this.tags,
 )
 
